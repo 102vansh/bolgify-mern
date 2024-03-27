@@ -6,6 +6,7 @@ import CreateBlog from "../components/CreateBlog";
 import Chart from "../components/Chart";
 import { Context } from "../main";
 import { Navigate } from "react-router-dom";
+import Footer from "../layout/Footer";
 const Dashboard = () => {
   const [component, setComponent] = useState("MyBlogs");
   const { mode, isAuthenticated } = useContext(Context);
@@ -28,6 +29,7 @@ const Dashboard = () => {
       ) : (
         <MyBlogs />
       )}
+    
     </section>
   );
 };

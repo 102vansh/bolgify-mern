@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../main";
 import axios from "axios";
 import { BeatLoader, BounceLoader } from "react-spinners";
+import Footer from "../layout/Footer";
 
 const AllAuthors = () => {
   const [authors, setAuthors] = useState([]);
@@ -42,6 +43,7 @@ const AllAuthors = () => {
           <BeatLoader color="gray" size={50} style={{ padding: "200px 0" }} />
         )}
       </div>
+      <Footer/>
     </article>
   );
 };

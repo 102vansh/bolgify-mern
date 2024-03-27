@@ -27,10 +27,10 @@ const Footer = () => {
             ullam, nesciunt ex laudantium quidem error sint, eum explicabo.
           </p>
           <p>
-            <span>Email:</span>zk@gmail.com
+            <span>Email:</span>28vanshjain@gmail.com
           </p>
           <p>
-            <span>Phone:</span>0123987123
+            <span>Phone:</span>8319874806
           </p>
         </div>
         <div className="quick_links">
@@ -65,7 +65,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="container">
-        <div className="logo">ZETA <span>BLOG</span></div>
+        <div className="logo">Blog <span>Ify</span></div>
         <div className="links">
           <Link to={"/"} target="_blank">
             <AiFillInstagram />

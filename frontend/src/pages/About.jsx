@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../main";
+import Footer from "../layout/Footer";
 
 const About = () => {
   const { mode } = useContext(Context);
@@ -58,7 +59,9 @@ const About = () => {
           ea labore ab dolor dolorum voluptatibus adipisci! At nobis minus
           voluptas fugiat rerum laboriosam.
         </p>
+      
       </div>
+     
     </article>
   );
 };
