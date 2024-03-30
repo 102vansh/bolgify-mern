@@ -1,0 +1,36 @@
+version: '3'
+services:
+  frontend:
+    build: 
+      context: './frontend'
+      dockerfile: Dockerfile
+    ports:
+      - 5173:5173  
+
+    container_name: react-container
+    environment:
+      - WATCHPACK_POLLING = true
+    networks:
+      - mern-stack-networks
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - backend    
+
+
+  backend:
+    build: 
+      context: './backend'
+      dockerfile: Dockerfile
+    ports:
+      - 5000:5000  
+
+    container_name: express-container
+    environment:
+      - WATCHPACK_POLLING = true
+    networks:
+      - mern-stack-networks
+    volumes:
+      - ./backend:/app
+    depends_on:
+      - mongo        
