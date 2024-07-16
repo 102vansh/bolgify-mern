@@ -49,10 +49,16 @@ res.status(201).json({
 }
 exports.login = async(req,res,next) =>{
     try{
-const {email,password} = req.body
+const {email,password,role} = req.body
 let user = await User.findOne({email})
 if(!user){
     return next(new ErrorHandler("Register First",500))
+}
+if (!role){
+    return(next(new ErrorHandler('select the role',500)))
+}
+if(user.role != role){
+return(next(new ErrorHandler('select the rolecorrectly',500)))
 }
 const ismatch = await user.comparepassword(password)
 if(!ismatch){
